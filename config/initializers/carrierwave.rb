@@ -11,9 +11,9 @@ if Rails.application.secrets.aws_access_key_id.present?
     config.fog_provider = 'fog/aws'
     config.fog_credentials = {
       provider:              'AWS',
-      aws_access_key_id:     Rails.application.secrets.aws_access_key_id,
-      aws_secret_access_key: Rails.application.secrets.aws_secret_access_key,
-      use_iam_profile:       true,
+      aws_access_key_id:     ENV.fetch("AWS_ACCESS_KEY_ID"),
+      aws_secret_access_key: ENV.fetch("AWS_SECRET_ACCESS_KEY"),
+      use_iam_profile:       false,
       region:                'eu-west-3',
     }
     config.fog_directory  = ENV.fetch("AWS_BUCKET_NAME", 'openairthp')
