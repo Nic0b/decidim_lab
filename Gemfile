@@ -31,6 +31,7 @@ group :development do
 end
 
 group :production do
+  gem 'delayed_job_active_record'
   gem 'passenger'
   gem 'fog-aws'
   gem 'dalli'
