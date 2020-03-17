@@ -22,7 +22,7 @@ if Rails.application.secrets.aws_access_key_id.present?
       aws_secret_access_key: Rails.application.secrets.aws_secret_access_key, # required
       # use_iam_profile:       true,
       region:                'eu-west-3',                                       # optional, defaults to 'us-east-1'
-      # host:                  's3.eu-west-3.amazonaws.com',                                  # optional, defaults to nil
+      host:                  's3.eu-west-3.amazonaws.com',                                  # optional, defaults to nil
     }
     config.fog_directory  = ENV.fetch("AWS_BUCKET_NAME", 'openairthp')              # required
     config.fog_attributes = { 'Cache-Control' => "max-age=#{365.day.to_i}", 'X-Content-Type-Options' => "nosniff" }    # optional, defaults to {}
