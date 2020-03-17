@@ -20,6 +20,7 @@ if Rails.application.secrets.aws_access_key_id.present?
       provider:              'AWS',                                             # required
       aws_access_key_id:     Rails.application.secrets.aws_access_key_id,     # required
       aws_secret_access_key: Rails.application.secrets.aws_secret_access_key, # required
+      https://github.com/Platoniq/decidim-install/issues/26
       region:                'eu-west-3',                                       # optional, defaults to 'us-east-1'
       host:                  's3.eu-west-3.amazonaws.com',                                  # optional, defaults to nil
     }
