@@ -3,12 +3,12 @@
 # Default CarrierWave setup.
 #
 
-CarrierWave.configure do |config|
-  config.permissions = 0o666
-  config.directory_permissions = 0o777
-  config.storage = :file
-  config.enable_processing = !Rails.env.test?
-end
+#CarrierWave.configure do |config|
+#  config.permissions = 0o666
+#  config.directory_permissions = 0o777
+#  config.storage = :file
+#  config.enable_processing = !Rails.env.test?
+#end
 
 if Rails.application.secrets.aws_access_key_id.present?
   require "carrierwave/storage/fog"
@@ -24,6 +24,7 @@ if Rails.application.secrets.aws_access_key_id.present?
       host:                  's3.eu-west-3.amazonaws.com',                                  # optional, defaults to nil
     }
     config.fog_directory  = ENV.fetch("AWS_BUCKET_NAME", 'openairthp')              # required
-    config.fog_attributes = { 'Cache-Control' => "max-age=#{365.day.to_i}" }    # optional, defaults to {}
+    config.fog_attributes = { 'Cache-Control' => "max-age=#{365.day.to_i}", 'X-Content-Type-Options' => "nosniff" }    # optional, defaults to {}
+	
   end
 end
