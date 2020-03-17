@@ -13,7 +13,7 @@ if Rails.application.secrets.aws_access_key_id.present?
       provider:              'AWS',
       aws_access_key_id:     Rails.application.secrets.aws_access_key_id,
       aws_secret_access_key: Rails.application.secrets.aws_secret_access_key,
-      use_iam_profile:       false,
+      use_iam_profile:       true,
      }
     config.fog_directory  = ENV.fetch("AWS_BUCKET_NAME", 'openairthp')
     config.fog_public     = false
