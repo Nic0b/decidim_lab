@@ -2,6 +2,7 @@
 
 # Default CarrierWave setup.
 #
+  require "carrierwave/storage/fog"
 
   CarrierWave.configure do |config|
     config.storage = :fog
