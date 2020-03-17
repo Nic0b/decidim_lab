@@ -19,6 +19,3 @@
       'X-Content-Type-Options' => "nosniff"
     }
   end
-
-
-end
