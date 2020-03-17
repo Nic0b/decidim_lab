@@ -14,9 +14,7 @@ if Rails.application.secrets.aws_access_key_id.present?
       aws_access_key_id:     Rails.application.secrets.aws_access_key_id,
       aws_secret_access_key: Rails.application.secrets.aws_secret_access_key,
       use_iam_profile:       false,
-      region:                'eu-west-1',
-      # host:                  'https://sts.eu-west-1.amazonaws.com',
-      # endpoint:              'https://s3.example.com:8080'
+      region:                'eu-west-3',
     }
     config.fog_directory  = ENV.fetch("AWS_BUCKET_NAME", 'openairthp')
     config.fog_public     = false
