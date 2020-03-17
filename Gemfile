@@ -9,6 +9,7 @@ gem "decidim", "0.20.0"
 # gem "decidim-initiatives", "0.20.0"
 
 gem "decidim-deploy-heroku", git: "https://github.com/codegram/decidim-deploy-heroku.git"
+gem 'delayed_job_active_record'
 gem "bootsnap", "~> 1.3"
 
 gem "puma", "~> 3.12.2"
@@ -31,7 +32,7 @@ group :development do
 end
 
 group :production do
-  gem 'delayed_job_active_record'
+ 
   gem 'passenger'
   gem 'fog-aws'
   gem 'dalli'
