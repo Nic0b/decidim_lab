@@ -3,9 +3,6 @@
 # Default CarrierWave setup.
 #
 
-if Rails.application.secrets.aws_access_key_id.present?
-  require "carrierwave/storage/fog"
-
   CarrierWave.configure do |config|
     config.storage = :fog
     config.fog_provider = 'fog/aws'
@@ -13,7 +10,6 @@ if Rails.application.secrets.aws_access_key_id.present?
       provider:              'AWS',
       aws_access_key_id:     ENV.fetch("AWS_ACCESS_KEY_ID"),
       aws_secret_access_key: ENV.fetch("AWS_SECRET_ACCESS_KEY"),
-      use_iam_profile:       false,
       region:                'eu-west-3',
     }
     config.fog_directory  = ENV.fetch("AWS_BUCKET_NAME", 'openairthp')
@@ -23,11 +19,6 @@ if Rails.application.secrets.aws_access_key_id.present?
       'X-Content-Type-Options' => "nosniff"
     }
   end
-else
-CarrierWave.configure do |config|
-  config.permissions = 0o666
-  config.directory_permissions = 0o777
-  config.storage = :file
-  config.enable_processing = !Rails.env.test?
-end
+
+
 end
