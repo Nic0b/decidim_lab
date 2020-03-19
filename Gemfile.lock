@@ -802,6 +802,7 @@ DEPENDENCIES
   decidim-consultations (= 0.20.0)
   decidim-deploy-heroku!
   decidim-dev (= 0.20.0)
+  decidim-meetings (= 0.20.0)
   delayed_job_active_record
   faker (~> 1.9)
   fog-aws
