@@ -193,6 +193,10 @@ GEM
       decidim-meetings (= 0.20.0)
       wicked_pdf (~> 1.4)
       wkhtmltopdf-binary (~> 0.12)
+    decidim-consultations (0.20.0)
+      decidim-admin (= 0.20.0)
+      decidim-comments (= 0.20.0)
+      decidim-core (= 0.20.0)
     decidim-core (0.20.0)
       active_link_to (~> 1.0)
       anchored (>= 1.1.0)
@@ -795,6 +799,7 @@ DEPENDENCIES
   dalli
   decidim (= 0.20.0)
   decidim-conferences
+  decidim-consultations (= 0.20.0)
   decidim-deploy-heroku!
   decidim-dev (= 0.20.0)
   delayed_job_active_record
