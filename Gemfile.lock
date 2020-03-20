@@ -794,6 +794,7 @@ DEPENDENCIES
   byebug (~> 11.0)
   dalli
   decidim (= 0.20.0)
+  decidim-assemblies
   decidim-conferences
   decidim-deploy-heroku!
   decidim-dev (= 0.20.0)
