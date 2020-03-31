@@ -4,11 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-gem 'rails', '~> 5.2', '>= 5.2.4.2'
-
-
-gem "actionview", ">= 5.2.4.2"
-
+gem 'rails', '~> 5.2.3', '>= 5.2.4.2'
 
 gem "decidim", "0.20.0"
 gem "decidim-consultations", "0.20.0"
