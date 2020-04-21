@@ -1,10 +1,3 @@
-GIT
-  remote: https://github.com/codegram/decidim-deploy-heroku.git
-  revision: 4c1f7c57b384685d0625157f21e7f8f8a47a455a
-  specs:
-    decidim-deploy-heroku (0.0.1)
-      decidim (~> 0.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -817,7 +810,6 @@ DEPENDENCIES
   decidim-assemblies
   decidim-conferences
   decidim-consultations (= 0.20.0)
-  decidim-deploy-heroku!
   decidim-dev (= 0.20.0)
   decidim-initiatives (= 0.20.0)
   decidim-meetings (= 0.20.0)
@@ -840,7 +832,7 @@ DEPENDENCIES
   web-console (~> 3.5)
 
 RUBY VERSION
-   ruby 2.5.3p105
+   ruby 2.5.4p155
 
 BUNDLED WITH
    2.1.4

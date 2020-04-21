@@ -14,7 +14,7 @@ gem 'decidim-meetings', "0.20.0"
 gem 'decidim-assemblies'
 
 
-gem "decidim-deploy-heroku", git: "https://github.com/codegram/decidim-deploy-heroku.git"
+# gem "decidim-deploy-heroku", git: "https://github.com/codegram/decidim-deploy-heroku.git"
 gem 'delayed_job_active_record'
 gem "bootsnap", "~> 1.3"
 
