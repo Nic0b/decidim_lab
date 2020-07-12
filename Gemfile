@@ -8,11 +8,6 @@ gem 'rails', '~> 5.2.3', '>= 5.2.4.2'
 
 gem "decidim", "0.20.0"
 gem "decidim-consultations", "0.20.0"
-gem "decidim-initiatives", "0.20.0"
-gem 'decidim-conferences'
-gem 'decidim-meetings', "0.20.0"
-gem 'decidim-assemblies'
-
 
 # gem "decidim-deploy-heroku", git: "https://github.com/codegram/decidim-deploy-heroku.git"
 gem 'delayed_job_active_record'
