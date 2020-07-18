@@ -24,7 +24,7 @@ if Rails.application.secrets.aws_access_key_id.present?
       region:                'eu-west-3',                                       # optional, defaults to 'us-east-1'
       host:                  's3.eu-west-3.amazonaws.com',                                  # optional, defaults to nil
     }
-    config.fog_directory  = ENV.fetch("AWS_BUCKET_NAME", 'decidimlab')              # required
+    config.fog_directory  = ENV.fetch("AWS_BUCKET_NAME", 'decidim-lab')              # required
     config.fog_attributes = { 'Cache-Control' => "max-age=#{365.day.to_i}", 'X-Content-Type-Options' => "nosniff" }    # optional, defaults to {}
 	
   end
